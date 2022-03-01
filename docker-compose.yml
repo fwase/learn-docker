@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  sql-docker:
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=senha123
+    volumes:
+      - ./init/:/docker-entrypoint-initdb.d
+      - mysqlVolume:/var/lib/mysql
+      - mysqlConfig:/etc/mysql
+    ports:
+      - 3306:3306
+
+  docker-python:
+    build:
+      context: .
+    ports:
+      - 8080:5000
+    depends_on:
+      - sql-docker
+
+volumes:
+  mysqlVolume:
+  mysqlConfig:
