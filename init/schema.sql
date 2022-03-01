@@ -1,0 +1,6 @@
+CREATE DATABASE learning_docker;
+
+CREATE TABLE IF NOT EXISTS `learning_docker`.`users` (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL
+) ENGINE=INNODB;
