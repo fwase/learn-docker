@@ -8,6 +8,7 @@ docker-compose -f docker-compose.yml up --build -d
 
 [WIP]
 
+- [X] Código base (com arquivos docker e docker-compose)
 - [ ] Mudar framework de API de Flask para FastAPI
 - [ ] Adicionar testes para cada módulo (inserção, atualização e remoção)
 - [ ] Adicionar CI via GitHub Actions
